@@ -15,7 +15,6 @@ bool validInput = true; //boolean value to check validity of input
 int counter = 0; //counter that affects number of input vals
 int numList[6]; //master int list, input by user
 int tempArr[6]; //temporary array to hold vals for sorting so master is not affected
-int tempSlotA, tempSlotB; //temporary int variables for holding val while swapping
 
 void randInitArray(int arr[],int len){ //funtion to print the input array
     time_t nTime;
