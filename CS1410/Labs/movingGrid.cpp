@@ -14,12 +14,10 @@ enum direction {N, E, S, W};
 
 string dirName[4] {"North", "East", "South", "West"};
 
-class character{
-private:
+struct character{
     int xPosition = 0;
     int yPosition = 0;
     string name;
-public:
     
     string getName(){
         return name;
@@ -29,38 +27,34 @@ public:
         name = input;
     }
     
-    void move(int distance, int direction){
-        if (xPosition == 0 && yPosition == 0){
-            cout << name << " steps out onto the grid..." << endl;
-        }
-        switch (direction) {
-            case N: xPosition += distance;
-                break;
-            case E: yPosition += distance;
-                break;
-            case S: xPosition -= distance;
-                break;
-            case W: yPosition -= distance;
-                break;
-            default: cout << "Please give valid input";
-                break;
-        }
-        
-        cout << endl << "Heading to the " << dirName[direction] << ", " << name << " moves " << distance << " paces." << endl;
-        
-    }
     
-    void getPosition(){
-        stringstream position;
-        position << "(" << xPosition << "," << yPosition << ")";
-        
-        cout << name << " is now located at " << position.str() << endl;
-    }
-    
-    void validDirection(){
-        
-    }
 };
+
+void move(character& guy,int distance, int direction){
+    if (guy.xPosition == 0 && guy.yPosition == 0){
+        cout << guy.name << " steps out onto the grid..." << endl;
+    }
+    switch (direction) {
+        case N: guy.xPosition += distance;
+            break;
+        case E: guy.yPosition += distance;
+            break;
+        case S: guy.xPosition -= distance;
+            break;
+        case W: guy.yPosition -= distance;
+            break;
+        default: cout << "Please give valid input";
+            break;
+    }
+    cout << endl << "Heading to the " << dirName[direction] << ", " << guy.name << " moves " << distance << " paces." << endl;
+}
+
+void getPosition(character& guy){
+    stringstream position;
+    position << "(" << guy.xPosition << "," << guy.yPosition << ")";
+    
+    cout << guy.name << " is now located at " << position.str() << endl;
+}
 
 int setDirection(string dir){
     int direction = -1;
@@ -135,8 +129,8 @@ int main(){
         }
         
         if (valid == true){
-            moverPerson.move(distance, direction);
-            moverPerson.getPosition();
+            move(moverPerson, distance, direction);
+            getPosition(moverPerson);
         }
         
         cout << endl << "Would you like to go again? (y or n): ";

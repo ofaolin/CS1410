@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F56E6E027B49020009D7660 /* Classes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F56E6DF27B49020009D7660 /* Classes.cpp */; };
+		4F486D7827BC8544007B622D /* movingGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FCEBDC227B351CA001B1A4B /* movingGrid.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,6 +24,10 @@
 
 /* Begin PBXFileReference section */
 		4F56E6DF27B49020009D7660 /* Classes.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Classes.cpp; sourceTree = "<group>"; };
+		4F588D1E27BA184B006071AE /* test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
+		4F5B14CE27B5CF83002BD2E7 /* movingGridV2.1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = movingGridV2.1.cpp; sourceTree = "<group>"; };
+		4F5B14D027B5EB84002BD2E7 /* dieMain.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = dieMain.cpp; sourceTree = "<group>"; };
+		4F5B14D127B5EB84002BD2E7 /* Die.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Die.h; sourceTree = "<group>"; };
 		4FCEBDBE27B32290001B1A4B /* Enum.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Enum.cpp; sourceTree = "<group>"; };
 		4FCEBDC027B32CB1001B1A4B /* Structs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Structs.cpp; sourceTree = "<group>"; };
 		4FCEBDC227B351CA001B1A4B /* movingGrid.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = movingGrid.cpp; sourceTree = "<group>"; };
@@ -42,12 +46,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F588D1D27BA1839006071AE /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				4F588D1E27BA184B006071AE /* test.cpp */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		4FCEBDBB27B2DFF7001B1A4B /* In Class Activities */ = {
 			isa = PBXGroup;
 			children = (
 				4FCEBDBE27B32290001B1A4B /* Enum.cpp */,
 				4FCEBDC027B32CB1001B1A4B /* Structs.cpp */,
 				4F56E6DF27B49020009D7660 /* Classes.cpp */,
+				4F5B14D027B5EB84002BD2E7 /* dieMain.cpp */,
+				4F5B14D127B5EB84002BD2E7 /* Die.h */,
 			);
 			path = "In Class Activities";
 			sourceTree = "<group>";
@@ -78,6 +92,7 @@
 		4FEFC5E427AEB7F600248307 /* CS1410 */ = {
 			isa = PBXGroup;
 			children = (
+				4F588D1D27BA1839006071AE /* Test */,
 				4FCEBDBC27B2E025001B1A4B /* No Brainers */,
 				4FCEBDBB27B2DFF7001B1A4B /* In Class Activities */,
 				4FEFC5EC27AEC1E600248307 /* Labs */,
@@ -90,6 +105,7 @@
 			children = (
 				4FEFC5E527AEB7F600248307 /* sorts.cpp */,
 				4FCEBDC227B351CA001B1A4B /* movingGrid.cpp */,
+				4F5B14CE27B5CF83002BD2E7 /* movingGridV2.1.cpp */,
 			);
 			path = Labs;
 			sourceTree = "<group>";
@@ -151,7 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F56E6E027B49020009D7660 /* Classes.cpp in Sources */,
+				4F486D7827BC8544007B622D /* movingGrid.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
